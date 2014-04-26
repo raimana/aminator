@@ -146,7 +146,7 @@ def plugin_manager():
             print "Unable to find a plugin named %s. You should use the search to find the correct name or alias for the plugin you want to install" % args.name
             sys.exit()
         else:
-            url = 'https://github.com/raimana/%s/archive/%s.tar.gz' % (plugin['repo_name'], plugin['branch']) 
+	    url = 'https://github.com/raimana/%s/archive/%s.tar.gz' % (plugin['repo_name'], plugin['branch'])
             print "Downloading latest version of %s from %s" % (args.name, url)
             req = requests.get(url, stream=True)
 
