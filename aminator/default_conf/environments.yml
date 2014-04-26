@@ -1,4 +1,11 @@
 default: ec2_yum_linux
+ec2_chef_centos:
+  cloud: ec2
+  distro: redhat
+  provisioner: chef
+  volume: linux
+  blockdevice: linux
+  finalizer: tagging_ebs
 ec2_yum_linux:
     cloud: ec2
     distro: redhat
